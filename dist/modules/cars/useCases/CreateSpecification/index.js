@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.createSpecificationController = void 0;
+var SpecificationRepository_1 = require("../../repositories/implementations/SpecificationRepository");
+var CreateSpecification_Controller_1 = require("./CreateSpecification.Controller");
+var CreateSpecificationUseCase_1 = require("./CreateSpecificationUseCase");
+var specificationsRepository = new SpecificationRepository_1.SpecificationRepository();
+var createSpecificationUseCase = new CreateSpecificationUseCase_1.CreateSpecificationUseCase(specificationsRepository);
+var createSpecificationController = new CreateSpecification_Controller_1.CreateSpecificationController(createSpecificationUseCase);
+exports.createSpecificationController = createSpecificationController;
