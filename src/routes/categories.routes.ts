@@ -20,7 +20,6 @@ categoriesRoutes.post("/", (request,response)=>{
 })
 
 categoriesRoutes.post("/import",upload.single("file"),(request,response)=>{
-    const {file} = request;
     return importCategoryController.handle(request,response);
 });
 
